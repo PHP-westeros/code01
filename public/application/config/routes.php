@@ -49,17 +49,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = 'terra';
+$route['default_controller'] = 'home';
+$route['404_override'] = 'home';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['terra'] = 'terra';
-$route['terra/show/(:any)'] = 'terra/show/$1/$2';
 
-$route['tables'] = 'tables';
-$route['tables/show'] = 'tables/show';
-$route['tables/clean-session'] = 'tables/cleansession';
-$route['tables/edit/(:any)/(:num)'] = 'tables/edit/$1/$2';
+$route['home'] = 'home';
+
+//$route['terra'] = 'terra';
+//$route['terra/show/(:any)'] = 'terra/show/$1/$2';
+//
+//$route['tables'] = 'tables';
+//$route['tables/show'] = 'tables/show';
+//$route['tables/clean-session'] = 'tables/cleansession';
+//$route['tables/edit/(:any)/(:num)'] = 'tables/edit/$1/$2';
 
 //$route['default_controller'] = 'pages/view';
 //$route['(:any)'] = 'pages/view/$1';
