@@ -8,6 +8,11 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />
 
     <title><?php echo $title; ?></title>
+    
+    
+    <!-- teste CSS -->
+        <?php echo $css_header; ?>
+    <!-- teste CSS -->
 
     <!-- Bootstrap core CSS -->
     <?php echo link_tag('assets/css/bootstrap.css', 'stylesheet', 'text/css'); ?>

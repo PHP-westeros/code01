@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 //        $this->load->library('session');
 //        $this->load->helper('url');
 //        $this->load->helper('html');
+//        $this->load->helper('LS_assets');
     }
 
     /**
@@ -33,6 +34,8 @@ class Home extends CI_Controller {
         $data['h1_content'] = ucfirst('limpar sessão '); // Capitalize the first letter
         
         $data['array_session'] = '<pre>'.print_r($this->session->userdata(), true).'</pre>';
+        
+        $data['css_header'] = get_assets_css(array('font_awesome'));
 
         $this->load->view('layout/header', $data);
         $this->load->view('home/index', $data);

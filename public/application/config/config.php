@@ -114,7 +114,8 @@ $config['enable_hooks'] = FALSE;
 | https://codeigniter.com/user_guide/general/creating_libraries.html
 |
 */
-$config['subclass_prefix'] = 'MY_';
+//$config['subclass_prefix'] = 'MY_'; // original
+$config['subclass_prefix'] = 'LS_'; // LS - Light Saber
 
 /*
 |--------------------------------------------------------------------------
@@ -511,3 +512,36 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+
+
+// ************************************************************************
+
+/*
+|--------------------------------------------------------------------------
+| Exclusive for Light Saber Project
+|--------------------------------------------------------------------------
+|
+ * 
+    link_tag('assets/font-awesome/css/font-awesome.css', 'stylesheet', 'text/css')
+    link_tag('assets/css/zabuto_calendar.css', 'stylesheet', 'text/css')
+    link_tag('assets/js/gritter/css/jquery.gritter.css', 'stylesheet', 'text/css')
+    link_tag('assets/lineicons/style.css', 'stylesheet', 'text/css')
+| Definition - dynamically assets
+*/
+$config['header_css'] = array(
+    'font_awesome' => 'assets/font-awesome/css/font-awesome.css',
+    'zabuto_calendar' => 'assets/css/zabuto_calendar.css',
+    'jquery_gritter' => 'assets/js/gritter/css/jquery.gritter.css',
+    'lineicons_style' => 'assets/lineicons/style.css'
+);
+
+$config['header_js']  = array('core.js',
+    'core.js',
+    'jquery-1.4.1.min.js',
+    'jquery-slidedeck.pack.lite.js',
+    'jquery-prettyPhoto.js',
+    'jquery.nivo.slider.js'
+);
+
