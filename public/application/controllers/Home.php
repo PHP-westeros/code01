@@ -4,14 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-    public function __construct() {
-        parent::__construct(); // obrigatório
+//    public function __construct() {
+//        parent::__construct(); // obrigatório
 
 //        $this->load->library('session');
 //        $this->load->helper('url');
 //        $this->load->helper('html');
 //        $this->load->helper('LS_assets');
-    }
+//    }
 
     /**
      * Index Page for this controller.
@@ -29,13 +29,56 @@ class Home extends CI_Controller {
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
     public function index() {
+        $data = array();
+        
+        // ---------- dynamically assets ---------------------------------------
+        $arr_css_header = array(
+            'bootstrap',
+            'font_awesome',
+            'zabuto_calendar',
+            'jquery_gritter',
+            'lineicons_style',
+            'custom_style',
+            'style_responsive',
+        );        
+        $data['css_header'] = get_assets_css($arr_css_header);
+        
+        $arr_js_header = array(
+            'chart_master',
+        );        
+        $data['js_header'] = get_assets_js($arr_js_header);
+        
+        $arr_js_if_lt_IE_9 = array(
+            'external_html5shiv',
+            'external_respond_min',
+        );        
+        $data['js_if_lt_IE_9'] = get_assets_js($arr_js_if_lt_IE_9);
+        
+        $arr_js_footer = array(
+            'jquery_default',
+            'jquery_min',
+            'bootstrap_min',
+            'dcjqaccordion',
+            'scrollto_min',
+            'nicescroll',
+            'sparkline',
+            'common_scripts',
+            'jquery_gritter',
+            'gritter_conf',
+            'sparkline_chart',
+            'zabuto_calendar', 
+            'dg_init_gritter',
+            'dg_init_zabuto_calendar',
+        );        
+        $data['js_footer'] = get_assets_js($arr_js_footer);
+        // ---------------------------------------------------------------------
+        
+        
 
         $data['title'] = ucfirst('Light Saber'); // Capitalize the first letter
         $data['h1_content'] = ucfirst('limpar sessão '); // Capitalize the first letter
         
         $data['array_session'] = '<pre>'.print_r($this->session->userdata(), true).'</pre>';
-        
-        $data['css_header'] = get_assets_css(array('font_awesome'));
 
         $this->load->view('layout/header', $data);
         $this->load->view('home/index', $data);

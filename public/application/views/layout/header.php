@@ -10,29 +10,36 @@
     <title><?php echo $title; ?></title>
     
     
-    <!-- teste CSS -->
-        <?php echo $css_header; ?>
-    <!-- teste CSS -->
+    <!-- CSS header -->
+    <?php echo $css_header; ?>
+    <!-- fim CSS header -->
+    
+    <!-- CSS header -->
+    <?php echo $js_header; ?>
+    <!-- fim CSS header -->
 
     <!-- Bootstrap core CSS -->
-    <?php echo link_tag('assets/css/bootstrap.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/css/bootstrap.css', 'stylesheet', 'text/css'); ?>
     
     <!--external css-->
-    <?php echo link_tag('assets/font-awesome/css/font-awesome.css', 'stylesheet', 'text/css'); ?>
-    <?php echo link_tag('assets/css/zabuto_calendar.css', 'stylesheet', 'text/css'); ?>
-    <?php echo link_tag('assets/js/gritter/css/jquery.gritter.css', 'stylesheet', 'text/css'); ?>
-    <?php echo link_tag('assets/lineicons/style.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/font-awesome/css/font-awesome.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/css/zabuto_calendar.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/js/gritter/css/jquery.gritter.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/lineicons/style.css', 'stylesheet', 'text/css'); ?>
     
     <!-- Custom styles for this template -->
-    <?php echo link_tag('assets/css/style.css', 'stylesheet', 'text/css'); ?>
-    <?php echo link_tag('assets/css/style-responsive.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/css/style.css', 'stylesheet', 'text/css'); ?>
+    <?php // echo link_tag('assets/css/style-responsive.css', 'stylesheet', 'text/css'); ?>
 
-    <script src="<?php echo base_url('assets/js/chart-master/Chart.js'); ?>"></script>
+    <!--<sc ript src="<?php // echo base_url('assets/js/chart-master/Chart.js'); ?>"></scr ipt>-->
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <?php echo $js_if_lt_IE_9; ?>
+        <?php 
+//      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+//      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        ?>
     <![endif]-->
   </head>
 

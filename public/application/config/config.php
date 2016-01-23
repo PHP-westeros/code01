@@ -523,25 +523,57 @@ $config['proxy_ips'] = '';
 | Exclusive for Light Saber Project
 |--------------------------------------------------------------------------
 |
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
  * 
-    link_tag('assets/font-awesome/css/font-awesome.css', 'stylesheet', 'text/css')
-    link_tag('assets/css/zabuto_calendar.css', 'stylesheet', 'text/css')
-    link_tag('assets/js/gritter/css/jquery.gritter.css', 'stylesheet', 'text/css')
-    link_tag('assets/lineicons/style.css', 'stylesheet', 'text/css')
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+    
+    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+
+    <!--script for this page-->
+    <script src="assets/js/sparkline-chart.js"></script>    
+    <script src="assets/js/zabuto_calendar.js"></script>	
 | Definition - dynamically assets
 */
+$config['header_js']  = array(
+    'chart_master' => 'assets/js/chart-master/Chart.js',
+    'external_html5shiv' => 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js',
+    'external_respond_min' => 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js',
+    
+    'jquery_default' => 'assets/js/jquery.js',
+    'jquery_min' => 'assets/js/jquery-1.8.3.min.js',
+    'bootstrap_min' => 'assets/js/bootstrap.min.js',
+    'dcjqaccordion' => 'assets/js/jquery.dcjqaccordion.2.7.js',
+    'scrollto_min' => 'assets/js/jquery.scrollTo.min.js',
+    'nicescroll' => 'assets/js/jquery.nicescroll.js',
+    'sparkline' => 'assets/js/jquery.sparkline.js',
+    'common_scripts' => 'assets/js/common-scripts.js',
+    'jquery_gritter' => 'assets/js/gritter/js/jquery.gritter.js',
+    'gritter_conf' => 'assets/js/gritter-conf.js',
+    'sparkline_chart' => 'assets/js/sparkline-chart.js',
+    'zabuto_calendar' => 'assets/js/zabuto_calendar.js',
+    'dg_init_gritter' => 'assets/js/dg_init_gritter.js',
+    'dg_init_zabuto_calendar' => 'assets/js/dg_init_zabuto_calendar.js',
+//    'xxxxxxxxxx' => 'xxxxxxxxxxxxxxxxxxx',
+);
 $config['header_css'] = array(
+    'bootstrap' => 'assets/css/bootstrap.css',
     'font_awesome' => 'assets/font-awesome/css/font-awesome.css',
     'zabuto_calendar' => 'assets/css/zabuto_calendar.css',
     'jquery_gritter' => 'assets/js/gritter/css/jquery.gritter.css',
-    'lineicons_style' => 'assets/lineicons/style.css'
-);
-
-$config['header_js']  = array('core.js',
-    'core.js',
-    'jquery-1.4.1.min.js',
-    'jquery-slidedeck.pack.lite.js',
-    'jquery-prettyPhoto.js',
-    'jquery.nivo.slider.js'
+    'lineicons_style' => 'assets/lineicons/style.css',    
+    'custom_style' => 'assets/css/style.css',
+    'style_responsive' => 'assets/css/style-responsive.css',
+    'jquery_fancybox' => 'assets/js/fancybox/jquery.fancybox.css"',
+//    'xxxxxxxxxx' => 'xxxxxxxxxxxxxxxxxxx',
 );
 
